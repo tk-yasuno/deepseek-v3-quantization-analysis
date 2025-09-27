@@ -1,0 +1,4 @@
+model_name,prompt_id,category,start_time,end_time,token_count,latency_ms,tokens_per_second,gpu_memory_mb,cpu_usage_percent
+# 使用例:
+# deepseek-coder:6.7b,001,技術解説,2025-09-27T19:20:00.123,2025-09-27T19:20:03.456,120,3333,36.0,8192,25.4
+# qwen2:7b,001,技術解説,2025-09-27T19:21:00.789,2025-09-27T19:21:02.345,110,1556,70.7,6144,18.2

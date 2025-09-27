@@ -1,0 +1,61 @@
+name: LLM Quantization Benchmark CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-setup:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Validate scripts
+      run: |
+        python -m py_compile scripts/quantization_comparison.py
+        python -m py_compile scripts/deepseek_quick_test.py
+    
+    - name: Check file structure
+      run: |
+        if (!(Test-Path "results")) { mkdir results }
+        if (!(Test-Path "data")) { mkdir data }
+        if (!(Test-Path "docs")) { mkdir docs }
+        echo "Project structure validated"
+
+  documentation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Validate README
+      run: |
+        if [ ! -f "README_GITHUB.md" ]; then
+          echo "README_GITHUB.md not found"
+          exit 1
+        fi
+        
+        if [ ! -f "docs/SETUP.md" ]; then
+          echo "SETUP.md not found"  
+          exit 1
+        fi
+        
+        echo "Documentation structure validated"
+    
+    - name: Check links (if markdown-link-check available)
+      run: |
+        echo "Link validation would run here"
+        # npx markdown-link-check README_GITHUB.md

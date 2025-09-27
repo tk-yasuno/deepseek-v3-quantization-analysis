@@ -1,0 +1,34 @@
+{
+  "test_prompts": [
+    {
+      "id": "001",
+      "category": "技術解説",
+      "prompt": "Transformerアーキテクチャの仕組みを、初心者にもわかりやすく説明してください。"
+    },
+    {
+      "id": "002",
+      "category": "コード生成",
+      "prompt": "Pythonで簡単なWebスクレイピングを行うコードを書いてください。requests とBeautifulSoupを使用してください。"
+    },
+    {
+      "id": "003",
+      "category": "要約",
+      "prompt": "機械学習における「過学習」の概念と、それを防ぐ主な手法を3つ挙げて説明してください。"
+    },
+    {
+      "id": "004",
+      "category": "問題解決",
+      "prompt": "データサイエンスプロジェクトで、モデルの予測精度が低い場合に確認すべき5つのポイントを教えてください。"
+    },
+    {
+      "id": "005",
+      "category": "対話・推論",
+      "prompt": "AIの発展が社会に与える影響について、メリットとデメリットの両面から論じてください。"
+    },
+    {
+      "id": "006",
+      "category": "翻訳・言語処理",
+      "prompt": "以下の英文を自然な日本語に翻訳し、技術的な背景も説明してください：\n'Large Language Models (LLMs) have revolutionized natural language processing by enabling few-shot learning capabilities.'"
+    }
+  ]
+}
