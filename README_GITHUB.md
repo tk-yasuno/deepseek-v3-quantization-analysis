@@ -129,8 +129,7 @@ python scripts/generate_report.py
 
 ### 詳細データ
 - [📊 CSV数値データ](results/quantization_comparison_log.csv)
-- [📝 詳細比較レポート](RESULTS.md)
-- [📋 品質分析](results/quality_analysis.md)
+- [📝 詳細比較レポート](results/RESULTS.md)
 
 ---
 
